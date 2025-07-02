@@ -1,0 +1,49 @@
+import React, { useState } from 'react';
+import '../CSS/loginform.css';
+
+const Login = ({ isOpen, onClose }) => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Here you would typically handle authentication
+    console.log('Sign in attempted with:', email, password);
+    onClose(); // Close the popup
+  };
+
+  if (!isOpen) return null;
+
+  return (
+    <div className="popup-overlay">
+      <div className="popup-content">
+        <button className="close-button" onClick={onClose}>×</button>
+        <h2 class="popup-title">Log In</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label>Email:</label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label>Password:</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit" className="submit-button">Sign In</button>
+        </form>
+
+      </div>
+    </div>
+  );
+};
+
+export default Login;
