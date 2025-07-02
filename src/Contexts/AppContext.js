@@ -10,11 +10,11 @@ export default function AppProvider({ children }) {
 
 
   useEffect(() => {
-    fetch('https://your-glitch-project-name.glitch.me/movies')
+    fetch('https://treasure-metal-mailbox.glitch.me/movies')
       .then(res => res.json())
       .then(data => setMovies(data));
 
-    fetch('https://your-glitch-project-name.glitch.me/tvshows')
+    fetch('https://treasure-metal-mailbox.glitch.me/tvshows')
       .then(res => res.json())
       .then(data => setTVShows(data));
   }, []);
