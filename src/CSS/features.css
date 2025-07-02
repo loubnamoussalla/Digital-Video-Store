@@ -1,17 +1,17 @@
 .feature-container {
     padding: 2rem;
     width: 100%;
-    max-width: 1200px; /* Set a reasonable max-width */
+    max-width: 1200px;  
     height: auto;
-    margin:auto; /* Fix the margin syntax */
-    display: flex; /* Add flex display */
+    margin:auto;  
+    display: flex;  
     flex-direction: column;
     overflow-x: hidden; 
-    /* align-items: center; */
+   
 }
 
 .feature-title {
-    /* text-align: center; */
+     
     margin-bottom: 2rem;
     width: 100%;
     color:#0485D6;
@@ -27,14 +27,14 @@
     flex-wrap: wrap;
     gap: 1rem;
     overflow-x: visible; 
-    /* overflow-x: auto; */
-    width: fit-content; /* Change from 100% to fit-content */
-    max-width: 100%; /* Ensure it doesn't overflow container */
-    /* justify-content: center; */
-    padding: 0 1rem; /* Add horizontal padding */
-    margin: 0 auto; /* Center the wrapper */
+    
+    width: fit-content;  
+    max-width: 100%;  
+     
+    padding: 0 1rem;  
+    margin: 0 auto; 
     scrollbar-width: none;
-    /* -ms-overflow-style: none; */
+    
 }
 
 .cards-wrapper::-webkit-scrollbar {
@@ -54,11 +54,9 @@
     border-radius: 8px;
 }
 
-/* Keep your existing CSS and add these media queries */
+ 
 
-/* Large screens (default) - Your existing CSS remains the same */
-
-/* Medium-large screens */
+ 
 @media (max-width: 1200px) {
     .feature-container {
         padding: 1.5rem;
@@ -74,8 +72,7 @@
         font-size: 0.9cm;
     }
 }
-
-/* Medium screens (tablets) */
+ 
 @media (max-width: 768px) {
     .feature-container {
         padding: 1rem;
@@ -96,13 +93,13 @@
         margin-bottom: 1.5rem;
     }
 
-    /* Adjust the br tags in your JSX */
+ 
     br {
         display: none;
     }
 }
 
-/* Small screens (mobile) */
+ 
 @media (max-width: 480px) {
     .feature-container {
         padding: 0.8rem;
@@ -124,7 +121,7 @@
     }
 }
 
-/* Very small screens */
+ 
 @media (max-width: 360px) {
     .feature-card {
         height: 240px;
@@ -137,7 +134,7 @@
 }
 
 .spacing-div {
-    height: 120px; /* Adjust as needed */
+    height: 120px;  
 }
 
 @media (max-width: 768px) {

@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import ListingGrid from '../Components/listingGrid';
 import { AppContext } from '../Contexts/AppContext';
 import Header from '../Components/header';
@@ -9,10 +9,8 @@ export default function ListingPage() {
 
   return (
     <div >
-       <Header />
-      
-
-      <ListingGrid/>
+      <Header />
+      <ListingGrid />
       <Footer />
     </div>
   );

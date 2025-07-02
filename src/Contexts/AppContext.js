@@ -5,13 +5,16 @@ export const AppContext = createContext();
 export default function AppProvider({ children }) {
   const [movies, setMovies] = useState([]);
   const [tvshows, setTVShows] = useState([]);
+  // http://localhost:5000/movies
+  // http://localhost:5000/tvshows
+
 
   useEffect(() => {
-    fetch('http://localhost:5000/movies')
+    fetch('https://your-glitch-project-name.glitch.me/movies')
       .then(res => res.json())
       .then(data => setMovies(data));
 
-    fetch('http://localhost:5000/tvshows')
+    fetch('https://your-glitch-project-name.glitch.me/tvshows')
       .then(res => res.json())
       .then(data => setTVShows(data));
   }, []);

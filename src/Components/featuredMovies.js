@@ -11,7 +11,7 @@ export default function FeaturedMovies() {
 
   return (
     <section className="feature-container">
-       <div className="spacing-div"></div> 
+      <div className="spacing-div"></div>
       <h2 className="feature-title">Featured Movies</h2>
       <div className="cards-wrapper">
         {items.map(item => (
@@ -21,5 +21,5 @@ export default function FeaturedMovies() {
         ))}
       </div>
     </section>
-);
+  );
 }

@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import '../CSS/loginform.css';
 
 const Register = ({ isOpen, onClose }) => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    onClose(); 
+    onClose();
   };
 
   if (!isOpen) return null;
@@ -20,7 +19,7 @@ const Register = ({ isOpen, onClose }) => {
         <button className="close-button" onClick={onClose}>×</button>
         <h2 class="popup-title">Register</h2>
         <form onSubmit={handleSubmit}>
-        <div className="form-group">
+          <div className="form-group">
             <label>Fullname:</label>
             <input
               type="text"

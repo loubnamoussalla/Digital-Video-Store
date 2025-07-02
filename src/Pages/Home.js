@@ -1,5 +1,5 @@
 import Footer from '../Components/footer';
-import HeroSlider from '../Components/heroSection';
+import HeroSlider from '../Components/heroSlider';
 import FeaturedMovies from '../Components/featuredMovies';
 import FeaturedTVShows from '../Components/featuredTV';
 import Header from '../Components/header';

@@ -7,9 +7,7 @@ const Login = ({ isOpen, onClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically handle authentication
-    console.log('Sign in attempted with:', email, password);
-    onClose(); // Close the popup
+    onClose(); // close the pop up
   };
 
   if (!isOpen) return null;
@@ -38,7 +36,7 @@ const Login = ({ isOpen, onClose }) => {
               required
             />
           </div>
-          <button type="submit" className="submit-button">Sign In</button>
+          <button type="submit" className="submit-button">Log In</button>
         </form>
 
       </div>

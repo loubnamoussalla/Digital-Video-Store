@@ -17,5 +17,5 @@ export default function FeaturedTVShows() {
         ))}
       </div>
     </section>
-);
+  );
 }

@@ -23,7 +23,6 @@ export default function Details() {
           <h1 className="title">{item.title} {item.year}</h1>
           <img src={item.image} alt={item.title} className="details-image"></img>
           <div className="metadata">
-            {/* <span className="year">{item.year}</span> */}
             <span className="rating">Rating: {item.rate}/10</span>
             <span className="runtime">{item.runTime || `${item.seasons} Seasons`}</span>
           </div>

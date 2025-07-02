@@ -72,7 +72,7 @@
   .poster-container {
     flex: 0 0 auto;
     width: 400px;
-    flex-direction: row-reverse; /* Poster on the right */
+    flex-direction: row-reverse; 
   }
   
   .poster {
@@ -87,8 +87,7 @@
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   }
   
-  /* Responsive Design */
-  @media (max-width: 1024px) {
+   @media (max-width: 1024px) {
     .details-container {
       padding: 1.5rem;
     }

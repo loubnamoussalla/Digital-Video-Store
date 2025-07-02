@@ -97,7 +97,7 @@ input:focus {
     text-decoration: underline;
 }
 
-/* Responsive Design */
+ 
 @media (max-width: 480px) {
     .popup-content {
         margin: 1rem;
