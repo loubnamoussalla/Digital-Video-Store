@@ -1,7 +1,9 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState, useContext} from "react";
 import { UserContext } from "../Contexts/UserContext";
 import { getUserById } from "../API/users";
 import "../CSS/profile.css";
+import { useNavigate } from 'react-router-dom';
+
 
 // Example avatar images (can be swapped with any animal avatars)
 const avatar = "Assets/avatar/cat.png";
@@ -10,10 +12,15 @@ const avatar = "Assets/avatar/cat.png";
 const Profile = () => {
   const { token } = useContext(UserContext);
   const [user, setUser] = useState(null);
+  const navigate = useNavigate();
+
 
   useEffect(() => {
     const fetchUser = async () => {
-      if (!token) return;
+      if (!token) {
+        navigate("/"); 
+        return null; 
+      }
       try {
         const userData = await getUserById(token);
         setUser(userData.body[0]);

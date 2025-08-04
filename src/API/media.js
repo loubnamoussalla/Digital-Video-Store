@@ -1,5 +1,5 @@
 
-const API_BASE = "https://digital-store-be.onrender.com/api/media";
+const API_BASE = "https://digital-store-be.onrender.com/media";
 
 export const getAllMovies = async () => {
   const res = await fetch(`${API_BASE}/movies`);
