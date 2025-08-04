@@ -1,0 +1,32 @@
+.footer {
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(247, 228, 188), rgb(241, 218, 169));
+    padding: 1rem;
+    color: #333;  
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+    box-shadow: -1px 2px 8px 0px rgba(0, 0, 0, 0.61);
+  }
+  
+  .footer-center {
+    text-align: center;
+  }
+  
+  .footer-right {
+    position: absolute;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .social {
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+  }
+  
+  .social:hover {
+    text-decoration: underline;
+  }
+  

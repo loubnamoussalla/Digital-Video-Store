@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+
+.slideshow-section {
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: auto;
+    overflow: visible; 
+    position: relative;
+    border-radius: 5px;
+
+}
+
+.slideshow-section .slide-container {
+    height: 70vh;/* or whatever height you prefer */
+    /* position: relative; */
+    overflow: hidden;
+    contain: layout style;
+
+    /* overflow: visible !important; */
+    box-shadow: -1px 2px 8px 0px rgba(0,0,0,0.61);
+    -webkit-box-shadow: -1px 2px 8px 0px rgba(0,0,0,0.61);
+    -moz-box-shadow: -1px 2px 8px 0px rgba(0,0,0,0.61);
+   
+
+}
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    z-index: -1;
+  }
+.slideshow-section .each-slide {
+    height: 70vh; 
+    
+    width: 100%;
+    position: relative;
+    overflow: visible !important;
+    
+}
+
+.slideshow-section .image-container {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    display: flex;
+
+}
+
+.slideshow-section .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: 1;
+    border-radius: 5px;
+    
+}
+
+.fade-wrapper {
+    width: 100%; /* Ensure it matches the parent container's width */
+    height: 70vh; /* Set a fixed height */
+    overflow: hidden; /* Prevent content overflow */
+    position: relative; /* Ensure proper positioning */
+}
+.image-button {
+    position: absolute;
+    bottom: 10px;
+    overflow: visible;
+    left: 50px;
+    height: 27vh;
+    width:200px;
+    border-style: double;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: black;
+    
+}
+.image-button:hover {
+    height: 29vh;
+    width:210px;
+}
+.paraghraph-slide{
+    position: absolute;
+    bottom: -81px;
+    overflow: visible;
+    left: 300px;
+    height: 27vh;
+    cursor: pointer;
+    z-index: 1000;
+    color: #F48529;
+    font-size: 1cm;
+    font-weight: bold;
+    text-shadow: 1px 0 currentColor, -1px 0 currentColor, 0 1px currentColor, 0 -1px currentColor;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+    letter-spacing:0.2cap;
+    font-family: 'Fredoka One', cursive;
+}
+h2{
+    margin-top: 6px;
+    color:#0485D6;
+    letter-spacing: 0.3cap;
+    font-weight: 900;
+    font-size: 1cm;
+    text-shadow: 1px 0 currentColor, -1px 0 currentColor, 0 1px currentColor, 0 -1px currentColor;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+.arrow {
+    z-index: 10;
+    cursor: pointer;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+  }
+  .prev {
+    left: -40px;
+  }
+  .next {
+    right: -40px;
+  }
+  .slide {
+    opacity: 0.5;
+    transition: 0.5s;
+  }
+  .activeSlide {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  .main-slide-img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  
+
+@media (max-width: 1200px) {
+    .slideshow-section {
+        padding: 1.5rem;
+        max-width: 100%;
+    }
+
+    .slideshow-section .slide-container,
+    .slideshow-section .each-slide {
+        height: 65vh;
+    }
+
+    .image-button {
+        height: 25vh;
+        width: 180px;
+        left: 30px;
+    }
+
+    .image-button:hover {
+        height: 27vh;
+        width: 190px;
+    }
+
+    .paraghraph-slide {
+        left: 250px;
+        font-size: 0.9cm;
+    }
+}
+
+@media (max-width: 768px) {
+    .slideshow-section {
+        padding: 1rem;
+    }
+
+    .slideshow-section .slide-container,
+    .slideshow-section .each-slide {
+        height: 60vh;
+        width: 97%;
+    }
+
+    .image-button {
+        height: 22vh;
+        width: 150px;
+        left: 20px;
+        bottom: 5px;
+    }
+
+    .image-button:hover {
+        height: 24vh;
+        width: 160px;
+    }
+
+    .paraghraph-slide {
+        left: 190px;
+        font-size: 0.8cm;
+        bottom: -71px;
+    }
+
+    h2 {
+        font-size: 0.8cm;
+        margin-top: 4%;
+    }
+}
+
+@media (max-width: 480px) {
+    .slideshow-section .slide-container,
+    .slideshow-section .each-slide {
+        height: 50vh;
+    }
+
+    .image-button {
+        height: 20vh;
+        width: 120px;
+        left: 10px;
+    }
+
+    .image-button:hover {
+        height: 22vh;
+        width: 130px;
+    }
+
+    .paraghraph-slide {
+        left: 140px;
+        font-size: 0.6cm;
+        bottom: -61px;
+    }
+
+    h2 {
+        font-size: 0.7cm;
+        margin-top: 3%;
+    }
+}
+
+
+@media (max-width: 360px) {
+    .image-button {
+        height: 18vh;
+        width: 90px;
+        left: 5px;
+    }
+
+    .paraghraph-slide {
+        left: 110px;
+        font-size: 0.5cm;
+        bottom: -51px;
+    }
+}
